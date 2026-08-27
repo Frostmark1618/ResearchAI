@@ -4,6 +4,13 @@
 
 ---
 
+## 🎥 Project Demo
+
+▶️ Watch the full working demo of ResearchAI
+
+[Click here to watch the demo video](demo.mp4)
+
+
 ## 📌 Overview
 
 ResearchAI is a document-based Retrieval-Augmented Generation (RAG) application built with Python and Streamlit.
