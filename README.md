@@ -161,18 +161,12 @@ ResearchAI/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── chroma_db/
+└── medresearch_db/
 ```
 
 ---
 
-## 🎥 Demo
 
-A project demonstration is available in the repository:
-
-[Watch the ResearchAI Demo](demo.mp4)
-
----
 
 ## 🎯 Use Cases
 
