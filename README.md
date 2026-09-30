@@ -1,177 +1,155 @@
 # 🔬 ResearchAI
 
-> An AI-powered research assistant for exploring, analyzing, and comparing research documents using Retrieval-Augmented Generation (RAG).
+> An AI-powered research assistant for exploring, analyzing, questioning, and comparing research documents using Retrieval-Augmented Generation (RAG).
+
+ResearchAI allows users to upload research papers, retrieve relevant evidence, ask natural-language questions, analyze individual documents, and compare multiple research papers.
+
+The system grounds responses in retrieved research content instead of relying only on the language model's general knowledge.
 
 ---
 
-## 🎥 Project Demo
+## ✨ What It Does
 
-▶️ Watch the full working demo of ResearchAI
-
-[Click here to watch the demo video](demo.mp4)
-
-
-## 📌 Overview
-
-ResearchAI is a document-based Retrieval-Augmented Generation (RAG) application built with Python and Streamlit.
-
-The application allows users to upload multiple PDF research documents from different domains and ask natural-language questions based on the information contained in those documents.
-
-Instead of relying only on the language model's general knowledge, ResearchAI retrieves relevant sections from the uploaded research material and uses them as supporting context for generating responses.
-
-The application also supports individual research document analysis and comparison between selected research papers.
+- 📄 Upload multiple PDF research papers
+- 🔎 Retrieve semantically relevant research passages
+- 💬 Ask natural-language questions about uploaded documents
+- 🧠 Generate answers grounded in retrieved evidence
+- 📊 Analyze individual research documents
+- 🔬 Compare selected research papers
+- 📚 Display document and page-level references
+- 🚫 Detect questions outside the available research context
+- 🗃️ Store document embeddings using ChromaDB
+- 🖥️ Provide an interactive Streamlit interface
 
 ---
 
-## ✨ Features
-
-- 📄 Upload multiple PDF research documents
-- 🔎 Semantic similarity-based document retrieval
-- 🧠 AI-generated answers grounded in retrieved research content
-- 💬 Natural-language research queries
-- 📊 Individual research document analysis
-- 🔬 Compare selected research documents
-- 📚 Research evidence with document and page references
-- 🚫 Out-of-context question detection
-- 🗃️ Persistent ChromaDB vector storage
-- 🔐 Groq API integration
-- 🖥️ Interactive Streamlit interface
-
----
-
-## 🔄 How It Works
+## 🧠 Architecture
 
 ```text
-Research PDF
-     ↓
+Research Papers
+      ↓
 PDF Processing
-     ↓
+      ↓
 Text Extraction
-     ↓
+      ↓
 Document Chunking
-     ↓
-Vector Embeddings
-     ↓
+      ↓
+Embeddings
+      ↓
 ChromaDB
-     ↓
+      ↓
 User Question
-     ↓
-Similarity Retrieval
-     ↓
+      ↓
+Semantic Retrieval
+      ↓
 Relevant Research Context
-     ↓
-Groq LLM
-     ↓
-Research Answer
+      ↓
+LLM
+      ↓
+Grounded Response
 ```
 
 ---
 
-## 📊 Research Analysis
+## 🔬 Research Analysis
 
-The application can generate structured insights from uploaded research documents, including:
+ResearchAI can generate structured insights from uploaded research documents, including:
 
-- 🎯 Research Objective
-- 🧪 Methodology
-- 🔬 Key Findings
-- ⚠️ Limitations
-- 💡 Research Takeaways
+- Research objective
+- Methodology
+- Key findings
+- Limitations
+- Research takeaways
 
 ---
 
-## 🔬 Research Document Comparison
+## 📚 Multi-Document Comparison
 
-Users can select research documents and compare them based on:
+Selected research documents can be compared across:
 
-- Main research focus
+- Research focus
 - Methodology
 - Key findings
 - Similarities
 - Differences
-- Overall conclusion
+- Overall conclusions
 
-The comparison is generated using relevant content retrieved from the selected research documents.
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Streamlit
-- LangChain
-- ChromaDB
-- HuggingFace Embeddings
-- Groq API
-- PyPDF
-- Sentence Transformers
+The comparison is based on relevant content retrieved from the selected documents.
 
 ---
 
-# ⚙️ Installation & Setup
+## 🛠️ Tech Stack
 
-## 1. Clone the Repository
+| Category | Technologies |
+|---|---|
+| Language | Python |
+| Interface | Streamlit |
+| RAG | LangChain |
+| Vector Database | ChromaDB |
+| Embeddings | HuggingFace Embeddings |
+| PDF Processing | PyPDF |
+| Text Processing | Sentence Transformers |
+| LLM | Groq API |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Frostmark1618/ResearchAI.git
+cd ResearchAI
 ```
 
-## 2. Navigate to the Project Folder
-
-```bash
-cd YOUR_PROJECT_FOLDER
-```
-
-## 3. Create a Python Virtual Environment
+### 2. Create a virtual environment
 
 ```powershell
 py -m venv .venv
 ```
 
-## 4. Activate the Virtual Environment
+### 3. Activate the environment
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks activation, run:
+If PowerShell blocks activation:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
-Then activate the environment again:
+Then activate again:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-## 5. Upgrade pip
+### 4. Install dependencies
 
 ```powershell
 python -m pip install --upgrade pip
-```
-
-## 6. Install All Project Dependencies
-
-```powershell
 python -m pip install -r requirements.txt
 ```
 
-## 7. Set the Groq API Key
+### 5. Configure the API key
 
-Replace `YOUR_GROQ_API_KEY` with your actual Groq API key:
+Set the required environment variable:
 
 ```powershell
 $env:GROQ_API_KEY="YOUR_GROQ_API_KEY"
 ```
 
-## 8. Run the Application
+Do not commit API keys or other secrets to the repository.
+
+### 6. Run the application
 
 ```powershell
 python -m streamlit run app.py
 ```
 
-The application will open automatically in your browser.
+The application will start locally through Streamlit.
 
 ---
 
@@ -183,58 +161,57 @@ ResearchAI/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-│
 └── chroma_db/
 ```
 
 ---
 
-## 🔐 API Key
+## 🎥 Demo
 
-This project requires a valid Groq API key.
+A project demonstration is available in the repository:
 
-Do not upload or expose your API key in GitHub repositories.
-
-Set your API key as an environment variable before running the application:
-
-```powershell
-$env:GROQ_API_KEY="YOUR_GROQ_API_KEY"
-```
+[Watch the ResearchAI Demo](demo.mp4)
 
 ---
 
 ## 🎯 Use Cases
 
-ResearchAI can be used for:
+ResearchAI can support:
 
 - Academic research exploration
 - Research paper analysis
 - Literature review assistance
-- Comparing research documents
-- Understanding technical documents
-- Extracting key research insights
-- Question answering based on uploaded documents
+- Technical document exploration
+- Multi-document comparison
+- Evidence-based question answering
 
 ---
 
-## ⚠️ Important Note
+## ⚠️ Limitations
 
-The responses generated by ResearchAI are based on information retrieved from the uploaded research documents.
+ResearchAI is designed to ground responses in the documents provided by the user.
 
-The application does not intentionally answer questions using unrelated information outside the uploaded research material.
+The quality of the generated response depends on factors such as:
 
-If the required information is not available in the uploaded documents, the system indicates that the question cannot be answered based on the available research content.
+- Document quality
+- Retrieval quality
+- Chunking strategy
+- Embedding quality
+- LLM behaviour
+
+If the required information cannot be found in the available research material, the system should avoid presenting unrelated information as document-grounded evidence.
 
 ---
 
-## 🚀 Future Improvements
+## 🔮 Future Improvements
 
-- Support for additional document formats
+- Additional document formats
+- Improved retrieval and reranking
 - Citation export
-- Research paper summarization
-- Advanced multi-document comparison
 - Research history
 - Downloadable analysis reports
+- Advanced multi-document comparison
+- Improved evaluation of retrieval quality
 
 ---
 
@@ -242,6 +219,12 @@ If the required information is not available in the uploaded documents, the syst
 
 **Riddhiman Adak**
 
+B.Tech CSE (AI & ML)
+
+[GitHub](https://github.com/Frostmark1618) •
+[Portfolio](https://riddhi-s-vision.vercel.app) •
+[LinkedIn](https://www.linkedin.com/in/riddhiman-adak-5b6336307/)
+
 ---
 
-⭐ If you find this project useful, consider giving the repository a star!
+⭐ If you find ResearchAI useful, consider starring the repository.
