@@ -166,7 +166,13 @@ ResearchAI/
 
 ---
 
+## 🎥 Demo
 
+A short demonstration of ResearchAI in action:
+
+[▶️ Watch the ResearchAI Demo](./demo.mp4)
+
+The demo shows the application workflow from uploading research papers to retrieving relevant evidence and generating research-grounded responses.
 
 ## 🎯 Use Cases
 
